@@ -1,0 +1,45 @@
+@import "tailwindcss";
+
+/* Applichiamo Libre Baskerville a tutto il body */
+body {
+  font-family: "Libre Baskerville", serif;
+}
+
+@keyframes saltello {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+.animate-jump {
+  animation: saltello 1.5s ease-in-out infinite;
+}
+
+
+/* Definiamo i delay come classi CSS */
+.delay-0 { animation-delay: 0s; }
+.delay-200 { animation-delay: 0.2s; }
+.delay-400 { animation-delay: 0.4s; }
+.delay-600 { animation-delay: 0.6s; }
+
+/* Mantieni la tua animazione saltello */
+@keyframes saltello {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-20px); }
+}
+
+.animate-jump {
+    animation: saltello 1.5s ease-in-out infinite;
+}
+
+.line-deco {
+  stroke: #33658a;
+  stroke-width: 1.5;
+  fill: none;
+  opacity: 0.1;
+}
