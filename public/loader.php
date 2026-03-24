@@ -29,7 +29,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
                 $_SESSION['user_id'] = $user['id'];
                 $_SESSION['pseudo'] = $user['pseudo'];
             } else {
-                // Se NON esiste, lo creiamo (come nel tuo esercizio dei pazienti)
+                // Se NON esiste, lo creiamo 
                 $sql = "INSERT INTO user (pseudo, created_at) VALUES (:pseudo, NOW())";
                 $stmt = $pdo->prepare($sql);
                 $stmt->execute([':pseudo' => $pseudo]);

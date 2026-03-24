@@ -11,7 +11,12 @@
 
 
     <link rel="stylesheet" href="../assets/css/style.css">
-    <script src="../assets/js/main.js" defer></script>
+    <script src="../assets/js/timer.js" defer></script>
+    <script src="../assets/js/questions.js" defer></script>
+    <script src="../assets/js/score.js" defer></script>
+    <script src="../assets/js/menu.js" defer></script>
+
+
 </head>
 
 <body class="bg-[url('../imgs/bg-image.png')] bg-cover bg-center min-h-screen flex flex-col bg-fixed">
@@ -29,9 +34,10 @@
             </a>
 
             <nav class="hidden md:flex items-center gap-6 lg:gap-8 text-base lg:text-lg font-bold text-[#33658A]">
-                <a href="selection.php" class="hover:text-[#9571F6] transition-colors">Jeux</a>
-                <a href="#" class="hover:text-[#9571F6] transition-colors">Créer</a>
-                <a href="#" class="hover:text-[#9571F6] transition-colors">Classement</a>
+                <a href="quiz.php" class="hover:text-[#9571F6] transition-colors">Jouer</a>
+                <a href="classement.php" class="hover:text-[#9571F6] transition-colors">Classement</a>
+                <a href="resultats.php" class="block text-lg font-bold text-[#33658A] hover:text-[#9571F6]">Résultats</a>
+
                 <a href="user.php"
                     class="bg-[#FCC822] text-black px-8 py-2 rounded-[25px] border border-black uppercase text-sm tracking-[0.15em] font-bold hover:bg-[#FCC822]/80 transition-all shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] active:shadow-none active:translate-x-0.5 active:translate-y-0.5">
                     Login
@@ -48,13 +54,14 @@
         </div>
 
         <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100 px-4 py-6 space-y-4 shadow-lg">
-            <a href="selection.php" class="block text-lg font-bold text-[#33658A] hover:text-[#9571F6]">Jeux</a>
-            <a href="#" class="block text-lg font-bold text-[#33658A] hover:text-[#9571F6]">Créer</a>
-            <a href="#" class="block text-lg font-bold text-[#33658A] hover:text-[#9571F6]">Classement</a>
+            <a href="quiz.php" class="block text-lg font-bold text-[#33658A] hover:text-[#9571F6]">Jouer</a>
+            <a href="resultats.php" class="block text-lg font-bold text-[#33658A] hover:text-[#9571F6]">Résultats</a>
+            <a href="classement.php" class="block text-lg font-bold text-[#33658A] hover:text-[#9571F6]">Classement</a>
             <hr class="border-gray-100">
-            <a href="user.php" class="block w-full text-center bg-[#FCC822] text-black py-3 rounded-[20px] border border-black font-bold uppercase tracking-wider">
+            <a href="user.php" class="block w-full text-center bg-[#FCC822] text-black py-3 rounded-[20px] border border-black font-bold  tracking-wider">
                 Login
             </a>
         </div>
     </header>
-  <main class="relative z-10 min-h-screen pb-60">
+    <div class="relative z-10 min-h-screen pb-60">
+

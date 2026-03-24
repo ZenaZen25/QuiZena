@@ -1,3 +1,4 @@
+
 @import "tailwindcss";
 
 /* Applichiamo Libre Baskerville a tutto il body */
@@ -21,6 +22,19 @@ body {
 }
 
 
+
+@keyframes spin-slow {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-spin-slow {
+  animation: spin-slow 4s linear infinite;
+}
 /* Definiamo i delay come classi CSS */
 .delay-0 { animation-delay: 0s; }
 .delay-200 { animation-delay: 0.2s; }
@@ -42,4 +56,57 @@ body {
   stroke-width: 1.5;
   fill: none;
   opacity: 0.1;
+}
+
+
+@layer utilities {
+  .bg-mon-bleu {
+    background-color: #33658A;
+  }
+  
+  .text-mon-bleu {
+    color: #33658A;
+  }
+  .border-mon-orange {
+    border-color: #FF8D28;
+  }
+}
+
+@layer components {
+  .text-huge {
+    font-size: 5.5rem;
+    line-height: 1; 
+  }
+}
+
+
+
+.card-risultato {
+    background-color: #EAB308; /* bg-yellow-500 */
+    border: 4px solid #a6a6a7;
+    border-radius: 1.5rem;
+    padding: 3rem 1.5rem;
+    max-width: 32rem;
+    margin: 0 auto 2.5rem auto;
+    /* L'ombra che Tailwind non ti prende */
+    box-shadow: 10px 10px 0px 0px #7895B2;
+    text-align: center;
+}
+
+.punti-testo {
+    font-weight: 900;
+    color: black;
+    display: block;
+    line-height: 1;
+    font-size: 5.5rem;
+}
+
+.punti-label {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-top: 0.5rem;
+    display: block;
 }
