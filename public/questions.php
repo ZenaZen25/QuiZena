@@ -15,15 +15,16 @@ include $root . '/partials/header.php';
 
 <main class="max-w-4xl mx-auto px-4 pt-12 mt-6  relative">
 
-    <!-- Barra di progresso -->
-    <div class="w-full bg-gray-200 h-8 rounded-2xl border-[3px] border-[#a6a6a7] overflow-hidden mb-8 shadow-inner relative">
-
-        <div id="progress-bar"
-            class="bg-linea-to-r from-[#FF9F43] to-[#FFC107] h-full transition-all duration-700 ease-out shadow-[4px_0px_10px_rgba(0,0,0,0.1)]"
-            style="width: 0%">
-        </div>
-
+    <div class="w-full mb-8">
+  <div class="w-full h-6 bg-gray-200 rounded-full border-4 border-gray-300 shadow-inner overflow-hidden">
+    
+    <div id="progress-bar"
+      class="h-full rounded-full bg-linear-to-r from-orange-400 to-yellow-400 transition-all duration-500 ease-out"
+      style="width: 0%">
     </div>
+
+  </div>
+</div>
 
     <!-- Titolo  -->
     <div class="flex justify-between items-center mb-12">

@@ -59,8 +59,21 @@ try {
             $stmtAns = $pdo->prepare("SELECT * FROM `answer` WHERE `question_id`= :question_id");
             $stmtAns->execute([':question_id' => $question['id']]);
 
-            // Aggiungo le risposte all'array della domanda
-            $question['answers'] = $stmtAns->fetchAll(PDO::FETCH_ASSOC);
+            // 1. Recuperiamo le risposte
+            $answers = $stmtAns->fetchAll(PDO::FETCH_ASSOC);
+
+            // 2. Controlliamo che $answers sia effettivamente un array e non sia vuoto
+            if (is_array($answers) && !empty($answers)) {
+                shuffle($answers); // Mischia solo se ci sono risposte // mélange
+            } else {
+                $answers = []; // Se è null o false, lo trasformiamo in un array vuoto per evitare errori
+            }
+
+            // 3. Assegniamo il risultato alla domanda
+            $question['answers'] = $answers;
+
+            // Salviamo le risposte mischiate dentro la domanda originale grazie alla '&'
+            $question['answers'] = $answers;
         }
 
         // -----------------------------------------------------------

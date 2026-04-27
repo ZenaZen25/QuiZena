@@ -2,6 +2,7 @@
 session_start();
 require_once "../utils/db_connect.php";
 
+
 // Verifichiamo il metodo POST
 if ($_SERVER["REQUEST_METHOD"] !== "POST") {
     header("Location: ../public/user.php?error=bad-method");

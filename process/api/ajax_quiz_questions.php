@@ -30,12 +30,16 @@ if (!isset($answer_id) && !isset($time_elapsed)) {
 $currentIndex    = $_SESSION['NumeroQuestioni'];           // Indice della domanda corrente
 $currentQuestion = $_SESSION['questions'][$currentIndex];  // L'array della domanda corrente
 
+
 $isCorrect     = false;  // Variabile per indicare se la risposta scelta è corretta
 $correctAnswer = null;   // Variabile per salvare l'ID della risposta corretta
+
 
 // -----------------------------------------------------------
 // 3️⃣ Controllo la risposta scelta
 // -----------------------------------------------------------
+
+
 
 foreach ($currentQuestion['answers'] as $answer) {    //Scorre tutte le risposte della domanda corrente. Es. domanda ha 4 risposte (A, B, C, D) — le esamina una per una.
     if (!isset($time_elapsed)) {
